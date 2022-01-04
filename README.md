@@ -11,16 +11,9 @@
 ##### there are files in the folder, namely
     -copy.js  (file for copying ready-made items during development)
     -html.js  (analogy with the file above, only for HTML)
+    -js.js (analogy with the file above, only for JS)
     -reset.js (file to clear the "dist folder")
-
-export const images = () => {
-    return app.gulp.src(app.path.src.images)
-        .pipe(app.plugins.plumber(
-            app.plugins.notify.onError({
-                title: "IMAGES",
-                message: "Error <%= error.message%>",
-            })
-        ))
-        .pipe(app.gulp.dest(app.path.build.images))
-        .pipe(app.plugins.browsersync.stream());
-}
+    -images.js(file to minifer photo, and upload to dist)
+    -scss.js  (file for converting SCSS/SASS to CSS0
+    -server.js(file to raise local server)
+    -zip.js   (file to formation ZIP-arch)
