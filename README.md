@@ -1,4 +1,4 @@
-# GULP
+# GULP🥤
 ## Collector structure GULP
 ### 1. Folder "gulp"
 #### a) Folder "config"
