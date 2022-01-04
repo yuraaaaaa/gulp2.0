@@ -16,6 +16,7 @@ import { scss } from './gulp/tasks/scss.js'
 import { images } from './gulp/tasks/images.js';
 import { js } from './gulp/tasks/js.js';
 import { zip } from './gulp/tasks/zip.js';
+import { fonts } from './gulp/tasks/fonts.js';
 
 function watcher() {
     gulp.watch(path.watch.files, copy);
@@ -25,7 +26,7 @@ function watcher() {
     gulp.watch(path.watch.images, images);
 }
 
-const mainTasks = gulp.parallel(copy, scss, scss, js, html)
+const mainTasks = gulp.parallel(copy, scss, scss, js, html, fonts)
 const dev       = gulp.series(reset , mainTasks, gulp.parallel(watcher, server));
 const deployZIP = gulp.series(reset, mainTasks, zip);
 
