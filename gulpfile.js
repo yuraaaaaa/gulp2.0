@@ -9,6 +9,7 @@ global.app = {
 }
 
 import { copy } from './gulp/tasks/copy.js';
+import { copyCSS } from '.gulp/tasks/copy.js'
 import { reset } from './gulp/tasks/reset.js';
 import { html } from './gulp/tasks/html.js';
 import { server } from './gulp/tasks/server.js';
@@ -26,7 +27,7 @@ function watcher() {
     gulp.watch(path.watch.images, images);
 }
 
-const mainTasks = gulp.parallel(copy, scss, scss, js, html, fonts)
+const mainTasks = gulp.parallel(copy, copyCSS, scss, scss, js, html, fonts)
 const dev       = gulp.series(reset , mainTasks, gulp.parallel(watcher, server));
 const deployZIP = gulp.series(reset, mainTasks, zip);
 
