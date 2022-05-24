@@ -3,7 +3,7 @@ export const copy = () => {
         .pipe(app.gulp.dest(app.path.build.files))
 }
 
-export const copyCss = () => {
+export const copyCSS = () => {
     return app.gulp.src(app.path.src.css)
         .pipe(app.gulp.dest(app.path.build.css))
 }
